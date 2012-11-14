@@ -1,6 +1,6 @@
 /*!
  * jQuery Topics Plugin v0.1
- * https://github.com/riga/jquery.Topics
+ * https://github.com/riga/jquery.topics
  *
  * Copyright 2012, Marcel Rieger
  * Dual licensed under the MIT or GPL Version 3 licenses.
