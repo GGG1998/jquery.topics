@@ -16,14 +16,14 @@ var myFunction = function( data ) {
 var topic = $.Topic("myTopic").subscribe( myFunction );
 ```
 
-Publish something a topic:
+Publish something in the topic:
 >```javascript
 $.Topic("myTopic").publish( something );
 // or
 topic.publish( something );
 ```
 
-Unsubscribe a function:
+Unsubscribe a function from the topic:
 >```javascript
 $.Topic("myTopic").unsubscribe( myFunction );
 ```
@@ -33,7 +33,7 @@ Check if the topic has already been in use:
 alert( $.Topic("myTopic").used() );
 ```
 
-Remove all subscriptions from a topic:
+Remove all subscriptions from the topic:
 >```javascript
 $.Topic("myTopic").empty();
 ```
