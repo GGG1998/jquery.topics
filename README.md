@@ -1,8 +1,12 @@
 # About
-
 *something italic*.
 **something bold**.
 
-    var test = function() {
-        return "test";
-    };
+```javascript
+var test = function() {
+    return "test";
+};
+```
+
+# Usage
+Todo
