@@ -1,4 +1,4 @@
-jquery.topics
+# jquery.topics
 
 A jQuery plugin that implements a lightweight Publish/Subscribe mechanism.
 
