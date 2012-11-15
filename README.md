@@ -1,9 +1,43 @@
+jquery.topics
+
+A jQuery plugin that implements a lightweight Publish/Subscribe mechanism.
+
 # About
-Yay!
+To do.
 
 # Usage
 ## Example
-Todo
+Subscribe a function to `myTopic`:
+>```javascript
+var myFunction = function( data ) {
+    // do something with 'data'
+    alert( data );
+};
+var topic = $.Topic("myTopic").subscribe( myFunction );
+```
+
+Publish something a topic:
+>```javascript
+$.Topic("myTopic").publish( something );
+// or
+topic.publish( something );
+```
+
+Unsubscribe a function:
+>```javascript
+$.Topic("myTopic").unsubscribe( myFunction );
+```
+
+Check if the topic is already been used:
+Unsubscribe `myFunction`:
+>```javascript
+alert( $.Topic("myTopic").used() );
+```
+
+Remove all subscriptions from a topic:
+>```javascript
+$.Topic("myTopic").empty();
+```
 
 ## Code
 >
@@ -27,4 +61,15 @@ provided by a `Topic`:
 - `used >> $.Callbacks().fired`
 - `empty >> $.Callbacks().empty`
 
-> For details on this methods, see http://api.jquery.com/category/callbacks-object/.
+> For details on this methods, see
+http://api.jquery.com/category/callbacks-object/.
+
+# Development
+
+- Source hosted at [GitHub](https://github.com/riga/jquery.topics)
+- Report issues, questions, feature requests on
+[GitHub Issues](https://github.com/riga/jquery.topics/issues)
+
+# Authors
+
+Marcel R. ([riga](https://github.com/riga))
