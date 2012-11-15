@@ -1,5 +1,5 @@
 /*!
- * jQuery Topics Plugin v0.1
+ * jQuery Topics Plugin v0.2
  * https://github.com/riga/jquery.topics
  *
  * Copyright 2012, Marcel Rieger
