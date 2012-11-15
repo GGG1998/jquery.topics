@@ -45,7 +45,7 @@ $.Topic( id, flags )
 ```
 >> Returns an either new or existent `Topic` object depending on `id`.
 - `id (String|Integer)`: The name of the target topic. If omitted, a one-way
-topic is created that you have to take care about on your own (which is not
+topic is created that you have to care for on your own (which is not
 very useful).
 - `flags (String)`: The flags for the internally used `$.Callbacks()` object
 passed in a string of space-separated values. They are only used when a topic is
