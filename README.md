@@ -28,8 +28,7 @@ Unsubscribe a function:
 $.Topic("myTopic").unsubscribe( myFunction );
 ```
 
-Check if the topic is already been used:
-Unsubscribe `myFunction`:
+Check if the topic has already been in use:
 >```javascript
 alert( $.Topic("myTopic").used() );
 ```
