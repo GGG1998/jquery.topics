@@ -1,6 +1,7 @@
 # About
----
-_something italic_.
+
+*something italic*.
+**something bold**.
 
     var test = function() {
         return "test";
