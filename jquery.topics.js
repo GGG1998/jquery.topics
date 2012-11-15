@@ -18,15 +18,15 @@ jQuery.Topic = function( /*String|Integer*/ id, /*String*/ flags ) {
 	var self = id && _topics[ id ];
 	
 	if ( !self ) {
-		var callbacks = jQuery.Callbacks( flags );
+		var _callbacks = jQuery.Callbacks( flags );
 		
 		self = {
-			publish: callbacks.fire,
-			publishBack: callbacks.fireBack || callbacks.fire,
-			subscribe: callbacks.add,
-			unsubscribe: callbacks.remove,
-			used: callbacks.fired,
-			empty: callbacks.empty
+			publish: _callbacks.fire,
+			publishBack: _callbacks.fireBack || _callbacks.fire,
+			subscribe: _callbacks.add,
+			unsubscribe: _callbacks.remove,
+			used: _callbacks.fired,
+			empty: _callbacks.empty
 		};
 		
 		if ( id ) {
