@@ -13,7 +13,7 @@
 
 var _topics = {};
 
-jQuery.Topic = function( /*String|Integer*/ id, /*String*/ flags ) {
+jQuery.Topic = function( id, flags ) {
 	
 	var self = id && _topics[ id ];
 	
