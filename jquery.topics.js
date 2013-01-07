@@ -13,26 +13,47 @@
 
 var _topics = {};
 
-jQuery.Topic = function( id, flags ) {
-	
-	var self = id && _topics[ id ];
-	
-	if ( !self ) {
-		var _callbacks = jQuery.Callbacks( flags );
-		
-		self = {
-			publish: _callbacks.fire,
-			publishBack: _callbacks.fireBack || _callbacks.fire,
-			subscribe: _callbacks.add,
-			unsubscribe: _callbacks.remove,
-			used: _callbacks.fired,
-			empty: _callbacks.empty
-		};
-		
-		if ( id ) {
-			_topics[ id ] = self;
-		}
-	}
-	
-	return self;
+jQuery.Topic = function(id, flags) {
+
+    var self = id && _topics[id];
+
+    if(!self) {
+        var _callbacks = jQuery.Callbacks(flags);
+
+        self = {
+            publish: function() {
+                _callbacks.fire.apply(_callbacks, arguments);
+                return self;
+            },
+            publishBack: function() {
+                if(_callbacks.fireBack) {
+                    return _callbacks.fireBack.apply(_callbacks, arguments);
+                }
+                _callbacks.fire.apply(_callbacks, arguments);
+                return self;
+            },
+            subscribe: function() {
+                _callbacks.add.apply(_callbacks, arguments);
+                return self;
+            },
+            unsubscribe: function() {
+                _callbacks.remove.apply(_callbacks, arguments);
+                return self;
+            },
+            used: function() {
+                _callbacks.fired.apply(_callbacks, arguments);
+                return self;
+            },
+            empty: function() {
+                _callbacks.empty.apply(_callbacks, arguments);
+                return self;
+            }
+        };
+
+        if(id) {
+            _topics[id] = self;
+        }
+    }
+
+    return self;
 };
